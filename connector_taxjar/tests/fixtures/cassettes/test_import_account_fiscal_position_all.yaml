@@ -1,0 +1,27 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [TaxJarPython/1.1.2]
+    method: GET
+    uri: http://api.taxjar.com/v2/nexus/regions
+  response:
+    body: {string: !!python/unicode '{"regions":[{"country_code":"US","country":"United
+        States","region_code":"NV","region":"Nevada"}]}'}
+    headers:
+      cache-control: ['max-age=0, private, must-revalidate']
+      connection: [keep-alive]
+      content-length: ['98']
+      content-type: [application/json]
+      date: ['Fri, 17 Nov 2017 22:58:54 GMT']
+      etag: [W/"a60d7910957c46c18822fb68e702908b"]
+      server: [Cowboy]
+      vary: [Origin]
+      via: [1.1 vegur]
+      x-request-id: [df440789-51c6-40c8-9464-6aedbeffb876]
+      x-runtime: ['0.017733']
+    status: {code: 200, message: OK}
+version: 1

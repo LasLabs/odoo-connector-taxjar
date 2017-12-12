@@ -1,0 +1,65 @@
+interactions:
+- request:
+    body: !!python/unicode '{"from_state": "PA", "line_items": [{"product_tax_code":
+      false, "discount": 0.0, "id": "The Same UUID!", "unit_price": 79.0, "quantity":
+      1.0}], "to_zip": "89015", "from_street": "1725 Slough Ave.", "from_zip": "18540",
+      "to_street": "240 S Water St.", "shipping": 0.0, "from_country": "US", "to_city":
+      false, "to_country": "US", "from_city": "Scranton", "to_state": "NV"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['370']
+      Content-Type: [application/json]
+      User-Agent: [TaxJarPython/1.1.2]
+    method: POST
+    uri: http://api.taxjar.com/v2/taxes
+  response:
+    body: {string: !!python/unicode '{"tax":{"order_total_amount":79.0,"shipping":0.0,"taxable_amount":79.0,"amount_to_collect":6.52,"rate":0.0825,"has_nexus":true,"freight_taxable":false,"tax_source":"destination","breakdown":{"taxable_amount":79.0,"tax_collectable":6.52,"combined_tax_rate":0.0825,"state_taxable_amount":0.0,"state_tax_rate":0.0,"state_tax_collectable":0.0,"county_taxable_amount":79.0,"county_tax_rate":0.0825,"county_tax_collectable":6.52,"city_taxable_amount":0.0,"city_tax_rate":0.0,"city_tax_collectable":0.0,"special_district_taxable_amount":0.0,"special_tax_rate":0.0,"special_district_tax_collectable":0.0,"line_items":[{"id":"The
+        Same UUID!","taxable_amount":79.0,"tax_collectable":6.52,"combined_tax_rate":0.0825,"state_taxable_amount":0.0,"state_sales_tax_rate":0.0,"state_amount":0.0,"county_taxable_amount":79.0,"county_tax_rate":0.0825,"county_amount":6.52,"city_taxable_amount":0.0,"city_tax_rate":0.0,"city_amount":0.0,"special_district_taxable_amount":0.0,"special_tax_rate":0.0,"special_district_amount":0.0}]}}}'}
+    headers:
+      cache-control: ['max-age=0, private, must-revalidate']
+      connection: [keep-alive]
+      content-length: ['1012']
+      content-type: [application/json]
+      date: ['Tue, 12 Dec 2017 18:29:39 GMT']
+      etag: [W/"137bdb05e565ba6dc1be49a47a0604eb"]
+      server: [Cowboy]
+      vary: [Origin]
+      via: [1.1 vegur]
+      x-request-id: [5442d278-80c6-4fb9-b800-6a218981228c]
+      x-runtime: ['0.078274']
+    status: {code: 200, message: OK}
+- request:
+    body: !!python/unicode '{"from_state": "PA", "to_zip": "89015", "to_street": "240
+      S Water St.", "from_street": "1725 Slough Ave.", "from_city": "Scranton", "from_zip":
+      "18540", "to_country": "US", "shipping": 0, "from_country": "US", "to_city":
+      false, "amount": 79.0, "transaction_date": "2017-12-12", "sales_tax": 0.0, "transaction_id":
+      48, "to_state": "NV"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['335']
+      Content-Type: [application/json]
+      User-Agent: [TaxJarPython/1.1.2]
+    method: POST
+    uri: http://api.taxjar.com/v2/transactions/orders
+  response:
+    body: {string: !!python/unicode '{"order":{"transaction_id":"48","user_id":56398,"transaction_date":"2017-12-12T00:00:00.000Z","transaction_reference_id":null,"from_country":"US","from_zip":"18540","from_state":"PA","from_city":"SCRANTON","from_street":"1725
+        Slough Ave.","to_country":"US","to_zip":"89015","to_state":"NV","to_city":"FALSE","to_street":"240
+        S Water St.","amount":"79.0","shipping":"0.0","sales_tax":"0.0","line_items":[]}}'}
+    headers:
+      cache-control: ['max-age=0, private, must-revalidate']
+      connection: [keep-alive]
+      content-length: ['406']
+      content-type: [application/json]
+      date: ['Tue, 12 Dec 2017 18:29:40 GMT']
+      etag: [W/"8ac045ba72d9a928109af1bbcca3344f"]
+      server: [Cowboy]
+      vary: [Origin]
+      via: [1.1 vegur]
+      x-request-id: [a3b5eb37-6edf-4e3f-a267-8143e3045328]
+      x-runtime: ['0.127641']
+    status: {code: 201, message: Created}
+version: 1

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <menuitem id="menu_taxjar_root"
+              parent="connector.menu_connector_root"
+              name="Taxjar"
+              sequence="10"
+              groups="connector.group_connector_manager" />
+
+    <menuitem id="menu_taxjar_backend"
+              parent="menu_taxjar_root"
+              name="Backends"
+              sequence="10"
+              action="taxjar_backend_action" />
+
+    <menuitem id="menu_taxjar_account_fiscal_position"
+              parent="menu_taxjar_root"
+              name="Nexus Regions"
+              sequence="20"
+              action="taxjar_account_fiscal_position_action" />
+
+</odoo>

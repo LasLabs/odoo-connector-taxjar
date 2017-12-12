@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="taxjar_backend_form" model="ir.ui.view">
+        <field name="name">taxjar.backend.form</field>
+        <field name="model">taxjar.backend</field>
+        <field name="arch" type="xml">
+            <form string="TaxJar Backend">
+
+                <header>
+                    <button name="action_sync_metadata"
+                            type="object"
+                            string="Import Metadata"
+                            class="oe_highlight" />
+                </header>
+
+                <sheet>
+
+                    <label for="name" class="oe_edit_only" />
+                    <h1>
+                        <field name="name" class="oe_inline" />
+                    </h1>
+
+                    <group name="group_configuration"
+                           string="Configuration">
+                        <field name="api_key" widget="password" />
+                        <field name="company_id" />
+                    </group>
+                    <group name="group_options"
+                           string="Options">
+                        <field name="is_exporter" />
+                    </group>
+
+                    <notebook>
+
+                        <page name="page_nexus_locations"
+                              string="Nexus Locations">
+                            <field name="nexus_location_ids"
+                                   context="{'default_auto_apply': True,
+                                             'default_backend_id': id,
+                                             }"
+                                   />
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="taxjar_backend_tree" model="ir.ui.view">
+        <field name="name">taxjar.backend.tree</field>
+        <field name="model">taxjar.backend</field>
+        <field name="arch" type="xml">
+            <tree string="TaxJar Backends">
+                <field name="name" />
+                <field name="company_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="taxjar_backend_action" model="ir.actions.act_window">
+        <field name="name">TaxJar Backends</field>
+        <field name="res_model">taxjar.backend</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
