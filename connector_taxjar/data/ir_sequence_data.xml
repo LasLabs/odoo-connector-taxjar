@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo noupdate="1">
+
+    <record id="ir_sequence_tax_line" model="ir.sequence">
+        <field name="name">TaxJar Tax Estimation Line Item</field>
+        <field name="code">taxjar.estimation.line</field>
+        <field name="prefix">TEL/</field>
+        <field name="padding">10</field>
+    </record>
+
+</odoo>
