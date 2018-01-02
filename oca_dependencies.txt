@@ -1,1 +1,1 @@
-connector
+connector https://github.com/guewen/connector.git migrate-v11-connector
