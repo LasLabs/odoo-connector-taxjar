@@ -98,9 +98,9 @@ Maintainer
 This module is maintained by LasLabs Inc.
 
 
-.. |Build Status| image:: https://img.shields.io/travis/LasLabs/odoo-connector-taxjar/master.svg
+.. |Build Status| image:: https://img.shields.io/travis/LasLabs/odoo-connector-taxjar/11.0.svg
    :target: https://travis-ci.org/LasLabs/odoo-connector-taxjar
-.. |Test Coverage| image:: https://img.shields.io/codecov/c/github/LasLabs/odoo-connector-taxjar/master.svg
+.. |Test Coverage| image:: https://img.shields.io/codecov/c/github/LasLabs/odoo-connector-taxjar/11.0.svg
    :target: https://codecov.io/gh/LasLabs/odoo-connector-taxjar
 .. |License AGPL-3| image:: https://img.shields.io/badge/license-AGPL--3-blue.svg
    :target: https://www.gnu.org/licenses/agpl
