@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 LasLabs Inc.
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
@@ -6,7 +5,7 @@
 {
     "name": "Sale Tax Connector",
     "summary": "Provides an adapter for sale order tax connectors.",
-    "version": "10.0.1.0.0",
+    "version": "11.0.1.0.0",
     "category": "Connector",
     "website": "https://laslabs.com",
     "author": "LasLabs",
